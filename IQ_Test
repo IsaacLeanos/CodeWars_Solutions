@@ -1,0 +1,15 @@
+function iqTest(numbers){ 
+  var odd=[]
+  var even=[]
+
+  numbers=numbers.split(' ').map((n)=>{
+    return parseInt(n)
+  })
+
+  numbers.forEach((n)=>{
+    if(n%2!==0) odd.push(n)
+    if(n%2===0) even.push(n)
+  })
+
+  return odd.length<even.length?numbers.indexOf(odd[0])+1:numbers.indexOf(even[0])+1
+}
